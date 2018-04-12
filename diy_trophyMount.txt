@@ -1,0 +1,25 @@
+[SUBMENU_START:Mount]
+.Create Mount. "Board" [effort:3] [phys:hands,one-armed] *CARPENTRY* /1h/ |-2|
+{Axe} <Carving Axe> '+for carving'
+{Knife} <Small Knife> '+for detail'
+{Board} [remove]
+[NAME:Shaped Mount]
+[MATERIAL:wood]
+[WEIGHT:10]
+
+.Clean Antlers. "Hunting Horn" [effort:2] [phys:hands,one-armed] *HIDEWORKING* /90/ |-1|
+{* antler} (2) [name:Cleaned %ss] [naming:original] [remove] [noquality] 'Antlers'
+{Water} #1#	
+[MATERIAL:antler]
+[TYPE:tool]
+
+.Mount Cleaned Antlers. "Hunting Horn" [effort:3] [phys:hands,one-armed] *COMMON* /1h/ \3h\ %20%
+{Cleaned *} [remove] [name:Mounted %s] [naming:original] 'Cleaned antlers'
+{Shaped Mount} [remove]
+{* leather} #1# [remove] 'Leather to wrap'
+{Pine Tar} #1# [remove] [ground] 'Pine Tar to adhere'
+{Tying equipment} (2) 'Fasteners for drying'
+{Fire} '+for heating leather & tar'
+[type:valuable]
+[TILEGFX:it-mountedantler]
+[SUBMENU_END:Mount]
